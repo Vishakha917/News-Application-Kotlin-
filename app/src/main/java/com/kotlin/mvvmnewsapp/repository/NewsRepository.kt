@@ -7,7 +7,7 @@ import com.kotlin.mvvmnewsapp.model.Article
 /**
  * Created by Vishakha Sharma on 25-05-2021.
  */
-class NewsRepository(val db: ArticleDatabase) {
+class NewsRepository(private val db: ArticleDatabase) {
     suspend fun getBreakingNews(countryCode: String, pageNumber: Int) =
         RetrofitClient.api.getBreakingNews(countryCode, pageNumber)
 

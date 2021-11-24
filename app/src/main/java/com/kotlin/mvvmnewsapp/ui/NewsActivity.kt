@@ -50,7 +50,7 @@ class NewsActivity : AppCompatActivity() { //this@NewsActivity
 
     }
 
-    inline fun <T : ViewBinding> AppCompatActivity.viewBinding(
+    private inline fun <T : ViewBinding> AppCompatActivity.viewBinding(
         crossinline bindingInflater: (LayoutInflater) -> T
     ) =
         lazy(LazyThreadSafetyMode.NONE) {

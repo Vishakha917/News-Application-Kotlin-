@@ -21,7 +21,7 @@ import java.io.IOException
 /**
  * Created by Vishakha Sharma on 25-05-2021.
  */
-class NewsViewmodel(app: Application, val newsRepository: NewsRepository) : AndroidViewModel(app) {
+class NewsViewmodel(app: Application, private val newsRepository: NewsRepository) : AndroidViewModel(app) {
     var breakingNewsPage = 1
     val breakingNews: MutableLiveData<Resource<NewsResponse>> = MutableLiveData()
     var breakingNewsResponse: NewsResponse? = null
